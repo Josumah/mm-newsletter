@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GitHub Mid-Market Roundup, April 2026</title>
+<style>
+:root{--fg:#1f2328;--muted:#59636e;--accent:#0969da;--border:#d0d7de;--bg:#ffffff;--card:#f6f8fa;}
+*{box-sizing:border-box;}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+ font-size:16px;line-height:1.6;color:var(--fg);background:var(--bg);margin:0;}
+.wrap{max-width:760px;margin:0 auto;padding:32px 20px 64px;}
+header.site{border-bottom:2px solid var(--border);padding-bottom:20px;margin-bottom:8px;}
+header.site h1{margin:0 0 6px;font-size:28px;}
+header.site p{margin:0;color:var(--muted);}
+a{color:var(--accent);text-decoration:none;}
+a:hover{text-decoration:underline;}
+.issue-card{border:1px solid var(--border);border-radius:10px;padding:18px 20px;margin:18px 0;background:var(--card);}
+.issue-card h2{margin:0 0 4px;font-size:20px;}
+.issue-card .date{color:var(--muted);font-size:13px;margin:0 0 10px;}
+.issue-card p.summary{margin:0 0 12px;}
+.issue-card .links a{margin-right:16px;font-weight:600;}
+.back{display:inline-block;margin-bottom:20px;font-weight:600;}
+article h2{border-bottom:1px solid var(--border);padding-bottom:6px;margin-top:34px;font-size:23px;}
+article h3{margin-top:24px;font-size:18px;}
+article ul{padding-left:22px;}
+article li{margin:6px 0;}
+article code{background:var(--card);padding:1px 6px;border-radius:5px;font-size:90%;}
+.foot{margin-top:48px;padding-top:16px;border-top:1px solid var(--border);color:var(--muted);font-size:13px;}
+</style></head>
+<body><div class="wrap">
+<a class="back" href="../index.html">&larr; All issues</a>
+<article><h1>GitHub Mid-Market Roundup, April 2026</h1>
+<p>Hey everyone, this is my monthly roundup of the GitHub updates that actually matter for your team. April was a big one. Three things really stood out:</p>
+<ul>
+<li><strong>Copilot data residency and FedRAMP-authorized models are now <code>GA</code></strong>, so the data-sovereignty conversations that have been sitting open can finally get answered.</li>
+<li><strong>Copilot cloud agent grew up.</strong> It can now research, plan, and code without forcing a pull request, and you can steer it from issues, projects, mobile, or the web.</li>
+<li><strong>Heads up for billing folks</strong>: Copilot moves to usage-based billing on June 1, 2026, and Copilot code review starts consuming GitHub Actions minutes the same day. There's time to plan, but the time is now.</li>
+</ul>
+<p>If anything in here catches your eye, send it back to me and we'll dig in. Feel free to share with your team.</p>
+<h2>Data residency (US + EU) and FedRAMP-authorized models are <code>GA</code></h2>
+<p>This is the launch a lot of you have been waiting on. As of <strong>April 13</strong>, every paid Copilot feature (agent mode, inline suggestions, chat, cloud agent, code review, PR summaries, and Copilot CLI) can run exclusively through data-resident model endpoints. EU coverage matches Microsoft's EU Data Boundary, so EU member states plus EFTA (Iceland, Liechtenstein, Norway, Switzerland) starting <strong>May 1, 2026</strong>. For US public sector customers, the underlying model hosts and infrastructure are FedRAMP Moderate authorized.</p>
+<p>A few things worth knowing:</p>
+<ul>
+<li><strong>Models at launch</strong>: GPT-5.4, Claude Sonnet 4.6, Claude Opus 4.6, and more. Gemini isn't in scope yet.</li>
+<li><strong>Pricing</strong>: data-resident and FedRAMP requests carry a 10% increase in the model multiplier. So a request that normally costs 1 premium request unit costs 1.1.</li>
+<li><strong>Off by default</strong>. Your enterprise or org admins have to opt in from Copilot settings.</li>
+<li><strong>Roadmap</strong>: Australia and Japan are coming later in 2026.</li>
+</ul>
+<p>Read more in the <a href="https://github.blog/changelog/2026-04-13-copilot-data-residency-in-us-eu-and-fedramp-compliance-now-available" target="_blank" rel="noopener">data residency announcement</a>.</p>
+<h2>Copilot cloud agent: research, plan, and code (not just open PRs)</h2>
+<p><code>GA</code>, <strong>April 1.</strong> The cloud agent (formerly Copilot coding agent) is no longer locked to a pull-request workflow. Three new modes that change how you'd use it:</p>
+<ul>
+<li><strong>Branch-only work</strong>. The agent generates code on a branch and you decide when to open the PR.</li>
+<li><strong>Implementation plans</strong>. Ask for a plan first, review and approve the approach, then the agent codes against it.</li>
+<li><strong>Deep research</strong>. Kick off a research session for thorough investigation of an unfamiliar part of the codebase.</li>
+</ul>
+<p>Available with all paid Copilot plans. Business and Enterprise admins enable cloud agent before users see it. <a href="https://github.blog/changelog/2026-04-01-research-plan-and-code-with-copilot-cloud-agent" target="_blank" rel="noopener">Read the changelog</a>.</p>
+<h2>Copilot SDK is in public preview</h2>
+<p><code>PREVIEW</code>, <strong>April 2.</strong> The SDK exposes the same agent runtime that powers cloud agent and Copilot CLI, so you get tool invocation, streaming, file operations, and multi-turn sessions out of the box. Available in Node.js/TypeScript, Python, Go, .NET, and Java. Highlights: custom tools and agents, fine-grained system prompt customization (replace, append, prepend, transform), blob attachments, OpenTelemetry distributed tracing, a permission framework, and BYOK for OpenAI, Microsoft Foundry, and Anthropic. Each prompt counts toward your premium request quota. <a href="https://github.blog/changelog/2026-04-02-copilot-sdk-in-public-preview" target="_blank" rel="noopener">Changelog</a> and the <a href="https://github.com/github/copilot-sdk" target="_blank" rel="noopener">SDK repo</a>.</p>
+<h2>Copilot organization custom instructions are <code>GA</code></h2>
+<p><strong>April 2.</strong> Org admins can now set default instructions that guide Copilot's behavior across every repo in the org. Instructions apply to Copilot Chat on github.com, Copilot code review, and Copilot cloud agent. Configure at Org settings, then Copilot, then Custom instructions. This is a great low-cost lever if your team has standards (style, frameworks, security patterns) you want Copilot to respect by default. <a href="https://github.blog/changelog/2026-04-02-copilot-organization-custom-instructions-are-generally-available" target="_blank" rel="noopener">Changelog</a>.</p>
+<h2>Two new models: GPT-5.5 and Claude Opus 4.7</h2>
+<p>Both <code>GA</code>, both shipped this month, both available across VS Code, Visual Studio, Copilot CLI, cloud agent, github.com, GitHub Mobile, JetBrains, Xcode, and Eclipse.</p>
+<ul>
+<li><strong>GPT-5.5</strong> (April 24). OpenAI's latest. Strongest performance on complex multi-step agentic coding tasks. Launching with a <strong>7.5x premium request multiplier</strong> as promotional pricing, so worth modeling against your usage before turning it on broadly. <a href="https://github.blog/changelog/2026-04-24-gpt-5-5-is-generally-available-for-github-copilot" target="_blank" rel="noopener">Changelog</a>.</li>
+<li><strong>Claude Opus 4.7</strong> (April 16). Anthropic's latest Opus. Stronger multi-step task performance, more reliable agentic execution. Over the next few weeks Opus 4.7 replaces Opus 4.5 and 4.6 in the picker. Same <strong>7.5x promotional multiplier</strong> through April 30. <a href="https://github.blog/changelog/2026-04-16-claude-opus-4-7-is-generally-available" target="_blank" rel="noopener">Changelog</a>.</li>
+</ul>
+<p>For both, your Business or Enterprise admin has to enable the model in policy before users see it.</p>
+<h2>BYOK (Bring Your Own Language Model Key) in VS Code is <code>GA</code></h2>
+<p><strong>April 22.</strong> Copilot Business and Enterprise users can now use their own API keys in VS Code. It supports Anthropic, Gemini, OpenAI, OpenRouter, and Azure, plus locally running models through Ollama and Foundry Local. BYOK works everywhere in VS Code Chat, including the built-in plan agent and custom agents. It does NOT apply to code completions. Usage is billed directly by your provider and doesn't count against Copilot quotas. The policy is enabled by default; admins can disable it per org from Copilot policy settings. <a href="https://github.blog/changelog/2026-04-22-bring-your-own-language-model-key-in-vs-code-now-available" target="_blank" rel="noopener">Changelog</a>.</p>
+<h2>Copilot CLI: BYOK, local models, and air-gapped mode</h2>
+<p><code>GA</code>, <strong>April 7.</strong> Copilot CLI now supports BYOK alongside fully local providers (Ollama, vLLM, Foundry Local). Two big enterprise wins:</p>
+<ul>
+<li><code>COPILOT_OFFLINE=true</code> enables fully air-gapped operation. Telemetry is disabled and the CLI only contacts your configured provider.</li>
+<li>GitHub authentication becomes optional when using your own provider. Sign in if you want <code>/delegate</code>, GitHub Code Search, and GitHub MCP server access on top.</li>
+</ul>
+<p>Models need tool calling, streaming, and at least a 128k token context window. <a href="https://github.blog/changelog/2026-04-07-copilot-cli-now-supports-byok-and-local-models" target="_blank" rel="noopener">Changelog</a>.</p>
+<h2>Remote control for Copilot CLI sessions on web and mobile</h2>
+<p><code>PREVIEW</code>, <strong>April 13.</strong> Run <code>copilot --remote</code> and you can monitor and steer a running CLI session from GitHub on the web or in the GitHub Mobile apps. The CLI shows a link and QR code, and activity stays in sync. Send mid-session steering messages, switch between plan, interactive, and autopilot modes, approve or deny permissions, respond to prompts. Mobile is available via Google Play beta and iOS TestFlight. Business and Enterprise admins must enable the remote control and CLI policies. <a href="https://github.blog/changelog/2026-04-13-remote-control-cli-sessions-on-web-and-mobile-in-public-preview" target="_blank" rel="noopener">Changelog</a>.</p>
+<h2>View and manage agent sessions from Issues and Projects</h2>
+<p><code>GA</code>, <strong>April 23.</strong> Cloud agent sessions are now visible and steerable directly from GitHub Issues and Projects. A header pill on issues shows all active and completed agent sessions. Click any session to open a side panel with progress, logs, and steering. "Show agent sessions" is enabled by default in projects, and you can open a session straight from a project card without leaving the board. <a href="https://github.blog/changelog/2026-04-23-view-and-manage-agent-sessions-from-issues-and-projects" target="_blank" rel="noopener">Changelog</a>.</p>
+<h2>Model selection for Claude and Codex agents on github.com</h2>
+<p><strong>April 14.</strong> When you start a Claude or Codex third-party agent session on github.com, you can now pick the specific model. Claude options today: Sonnet 4.6, Opus 4.6, Sonnet 4.5, Opus 4.5. Codex options: GPT-5.2-Codex, GPT-5.3-Codex, GPT-5.4. Access is included with Copilot subscriptions; Business and Enterprise admins enable the relevant Anthropic or Codex policy. <a href="https://github.blog/changelog/2026-04-14-model-selection-for-claude-and-codex-agents-on-github-com" target="_blank" rel="noopener">Changelog</a>.</p>
+<h2>JetBrains gets inline agent mode</h2>
+<p><code>PREVIEW</code>, <strong>April 24.</strong> Inline agent mode landed in preview for JetBrains IDEs alongside other improvements. If you've been holding back a JetBrains rollout because of feature parity with VS Code, this is worth another look. <a href="https://github.blog/changelog/2026-04-24-inline-agent-mode-in-preview-and-more-in-github-copilot-for-jetbrains-ides" target="_blank" rel="noopener">Changelog</a>.</p>
+<h2>VS Code 1.118 (April 29): agent improvements and token efficiency</h2>
+<p>This release leans into two themes.</p>
+<p><strong>Agent experience.</strong> The VS Code Agents app for Insiders adds a Claude agent option, a web client at <code>insiders.vscode.dev/agents</code> over Dev Tunnel, and one-click switching to and from VS Code Insiders. Copilot is now added as a Git co-author by default on commits it changes. Semantic indexing of non-GitHub repositories rolled out to all users. A new <code>githubTextSearch</code> agent tool runs grep-style searches across a GitHub repo or an entire org.</p>
+<p><strong>Token efficiency.</strong> This is a direct response to the June 1 billing change. Prompt caching now reuses 93%+ of each request from cache. The new tool search tool defers most tools and loads them on demand for up to 20% token savings (default for Anthropic, opt-in for GPT-5.4 and GPT-5.5 via the <code>github.copilot.chat.responsesApi.toolSearchTool.enabled</code> setting). WebSocket mode for OpenAI models cuts latency by about 12%. There's also a new <code>ChatApprovedAccountOrganizations</code> enterprise device policy that gates AI feature activation on approved GitHub org membership.</p>
+<p><a href="https://code.visualstudio.com/updates/" target="_blank" rel="noopener">Full release notes</a>.</p>
+<h2>Other Copilot updates worth knowing</h2>
+<ul>
+<li><strong>Cloud agent commits are signed</strong>, so you'll see verified signatures in Git history. (<a href="https://github.blog/changelog/2026-04-03-copilot-cloud-agent-signs-its-commits" target="_blank" rel="noopener">April 3</a>)</li>
+<li><strong>Org-level controls for cloud agent</strong>: configure runner labels, sizes, and groups (<a href="https://github.blog/changelog/2026-04-03-organization-runner-controls-for-copilot-cloud-agent" target="_blank" rel="noopener">April 3</a>); set firewall allowed and blocked outbound hosts (<a href="https://github.blog/changelog/2026-04-03-organization-firewall-settings-for-copilot-cloud-agent" target="_blank" rel="noopener">April 3</a>); enable cloud agent at scale via repository custom properties (<a href="https://github.blog/changelog/2026-04-15-enable-copilot-cloud-agent-via-custom-properties" target="_blank" rel="noopener">April 15</a>).</li>
+<li><strong>Cloud agent runs faster</strong>: 20% faster validation tools (<a href="https://github.blog/changelog/2026-04-10-copilot-cloud-agents-validation-tools-are-now-20-faster" target="_blank" rel="noopener">April 10</a>) and 20% faster startup with Actions custom images (<a href="https://github.blog/changelog/2026-04-27-copilot-cloud-agent-starts-20-faster-with-actions-custom-images" target="_blank" rel="noopener">April 27</a>).</li>
+<li><strong>Three-click merge conflict resolution</strong> with cloud agent. (<a href="https://github.blog/changelog/2026-04-13-fix-merge-conflicts-in-three-clicks-with-copilot-cloud-agent" target="_blank" rel="noopener">April 13</a>)</li>
+<li><strong>Copilot CLI</strong>: auto model selection (<a href="https://github.blog/changelog/2026-04-17-github-copilot-cli-now-supports-copilot-auto-model-selection" target="_blank" rel="noopener">April 17</a>); custom registry MCP allowlists (<a href="https://github.blog/changelog/2026-04-16-copilot-cli-supports-custom-registry-based-mcp-allowlists" target="_blank" rel="noopener">April 16</a>); manage agent skills with <code>gh</code> CLI (<a href="https://github.blog/changelog/2026-04-16-manage-agent-skills-with-github-cli" target="_blank" rel="noopener">April 16</a>); C++ code intelligence in preview (<a href="https://github.blog/changelog/2026-04-22-c-code-intelligence-for-github-copilot-cli-in-public-preview" target="_blank" rel="noopener">April 22</a>).</li>
+<li><strong>Copilot Chat</strong>: improved PR experience (<a href="https://github.blog/changelog/2026-04-23-copilot-chat-improvements-for-pull-requests" target="_blank" rel="noopener">April 23</a>); better debugging on the web (<a href="https://github.blog/changelog/2026-04-23-better-debugging-with-github-copilot-on-the-web" target="_blank" rel="noopener">April 23</a>).</li>
+<li><strong>Usage metrics keep maturing</strong>: cloud agent active users, code review active vs passive users, Copilot CLI per-user activity, and merge metrics for Copilot-reviewed PRs are all now first-class fields in the report and API. Heads up that report download URLs are changing soon. (<a href="https://github.blog/changelog/2026-04-22-upcoming-change-to-copilot-usage-metrics-report-download-urls" target="_blank" rel="noopener">April 22 notice</a>)</li>
+<li><strong>Deprecation</strong>: GPT-5.1, 5.1 Codex, Codex-Max, and Codex-Mini have been removed from the model picker. If your team has any pinned configurations, swap them out. (<a href="https://github.blog/changelog/2026-04-03-gpt-5-1-codex-gpt-5-1-codex-max-and-gpt-5-1-codex-mini-deprecated" target="_blank" rel="noopener">April 3</a>)</li>
+</ul>
+<h2>Code Security risk assessment is <code>GA</code> for organizations</h2>
+<p><strong>April 8.</strong> Org admins and security managers can now run a free Code Security risk assessment that reviews vulnerabilities across the org. The report summarizes findings by severity, rule type, and programming language. It includes remediation guidance and highlights where Copilot Autofix can suggest fixes automatically. The point: identify the high-impact repos to prioritize and get a clean baseline. Run it from your org's Security tab, then Assessments. Available on GitHub Enterprise Cloud and GitHub Team today, ships in GHES 3.22. <a href="https://github.blog/changelog/2026-04-08-code-security-risk-assessment-available-for-organizations" target="_blank" rel="noopener">Changelog</a> and the <a href="https://docs.github.com/enterprise-cloud@latest/code-security/concepts/code-scanning/code-security-risk-assessment" target="_blank" rel="noopener">docs</a>.</p>
+<h2>Dependabot alerts are now assignable to AI agents for remediation</h2>
+<p><code>GA</code>, <strong>April 7.</strong> Some dependency vulnerabilities need more than a version bump. From the Dependabot alert detail page, you can now select <strong>Assign to Agent</strong> and pick Copilot, Claude, or Codex. The agent analyzes the alert and your repo's usage of the dependency, opens a draft PR with a proposed fix, and tries to resolve any test failures the update introduces. You can assign multiple agents to the same alert in parallel and compare their PRs. Useful for breaking-change major version upgrades, package downgrades when a version is compromised, and complex updates that fall outside Dependabot's rules engine. Requires GitHub Code Security and a Copilot plan with coding agent access. <a href="https://github.blog/changelog/2026-04-07-dependabot-alerts-are-now-assignable-to-ai-agents-for-remediation" target="_blank" rel="noopener">Changelog</a>.</p>
+<h2>OIDC support for Dependabot and code scanning</h2>
+<p><code>GA</code> on github.com, <strong>April 14.</strong> Org admins can configure OIDC-based credentials for private registries instead of storing long-lived secrets in repo configs. It's the same federated trust model that GitHub Actions workflows already use. Supported registries at launch: AWS CodeArtifact, Azure DevOps Artifacts, JFrog Artifactory. Cloudsmith and Google Artifact Registry land within four weeks. Ships in GHES 3.22. <a href="https://github.blog/changelog/2026-04-14-oidc-support-for-dependabot-and-code-scanning" target="_blank" rel="noopener">Changelog</a>.</p>
+<h2>Link code scanning alerts to GitHub Issues</h2>
+<p><code>PREVIEW</code>, <strong>April 14.</strong> Pull security remediation into your existing planning workflow. Connect alerts to GitHub Issues from either side, see tracking icons in alert lists, and filter by <code>has:tracking</code> or <code>no:tracking</code>. Available on github.com and on GitHub Enterprise Cloud with data residency. <a href="https://github.blog/changelog/2026-04-14-link-code-scanning-alerts-to-github-issues" target="_blank" rel="noopener">Changelog</a>.</p>
+<h2>Deployment context in repository properties and alerts</h2>
+<p><strong>April 14.</strong> Code scanning alerts now show which environments a vulnerable code path is deployed to (production, staging) for much faster triage. <a href="https://github.blog/changelog/2026-04-14-deployment-context-in-repository-properties-and-alerts" target="_blank" rel="noopener">Changelog</a>.</p>
+<h2>More security improvements</h2>
+<ul>
+<li><strong>Org-level private registries</strong> for both Dependabot and code scanning. Configure once, instead of per-repo. (<a href="https://github.blog/changelog/2026-04-14-dependabot-and-code-scanning-org-level-private-registries" target="_blank" rel="noopener">April 14</a>)</li>
+<li><strong>Runtime context from Dynatrace</strong> can prioritize alerts by whether the vulnerable code path actually runs in production. (<a href="https://github.blog/changelog/2026-04-07-prioritize-security-alerts-with-runtime-context-from-dynatrace" target="_blank" rel="noopener">April 7</a>)</li>
+<li><strong>Batch apply Copilot Autofix suggestions on PRs</strong> instead of clicking through one-by-one. (<a href="https://github.blog/changelog/2026-04-07-code-scanning-batch-apply-security-alert-suggestions-on-pull-requests" target="_blank" rel="noopener">April 7</a>)</li>
+<li><strong>Ask Copilot in security assessments</strong> is embedded in the Code Security risk assessment view for direct Q&amp;A on findings. (<a href="https://github.blog/changelog/2026-04-09-ask-copilot-in-security-assessments-now-available" target="_blank" rel="noopener">April 9</a>)</li>
+<li><strong>Secret scanning</strong>: pattern updates and product improvements (<a href="https://github.blog/changelog/2026-04-14-secret-scanning-pattern-updates-and-product-improvements" target="_blank" rel="noopener">April 14</a>); alert API, webhook, and delegated bypass workflow improvements (<a href="https://github.blog/changelog/2026-04-08-secret-scanning-improvements-to-alert-apis-webhooks-and-delegated-workflows" target="_blank" rel="noopener">April 8</a>).</li>
+<li><strong>CodeQL</strong>: 2.25.2 adds Kotlin 2.3.20 support (<a href="https://github.blog/changelog/2026-04-15-codeql-2-25-2-adds-kotlin-2-3-20-support-and-other-updates" target="_blank" rel="noopener">April 15</a>); models-as-data now supports sanitizers and validators (<a href="https://github.blog/changelog/2026-04-21-codeql-now-supports-sanitizers-and-validators-in-models-as-data" target="_blank" rel="noopener">April 21</a>).</li>
+<li><strong>SBOM exports</strong> are now computed asynchronously, so large repo exports stop timing out. (<a href="https://github.blog/changelog/2026-04-14-sbom-exports-are-now-computed-asynchronously" target="_blank" rel="noopener">April 14</a>)</li>
+<li><strong>Dependabot</strong>: Python dependency graphs are now Dependabot-based (<a href="https://github.blog/changelog/2026-04-23-dependabot-graphs-for-python" target="_blank" rel="noopener">April 23</a>); Nix ecosystem is now supported for version updates (<a href="https://github.blog/changelog/2026-04-07-dependabot-version-updates-now-support-the-nix-ecosystem" target="_blank" rel="noopener">April 7</a>).</li>
+<li><strong>Repository "Security" tab is now "Security &amp; quality"</strong> to reflect the Code Quality preview integration. (<a href="https://github.blog/changelog/2026-04-02-the-security-tab-is-now-security-quality" target="_blank" rel="noopener">April 2</a>)</li>
+<li><strong>Heads up, SHA-1 sunset on HTTPS</strong>. Very old HTTPS clients or proxies should be checked for compatibility. (<a href="https://github.blog/changelog/2026-04-20-sunsetting-sha-1-in-https-on-github" target="_blank" rel="noopener">April 20</a>)</li>
+<li><strong>API deprecation</strong>: several security-related organization API fields are being deprecated. If you automate with the Org REST/GraphQL APIs, give them a review. (<a href="https://github.blog/changelog/2026-04-21-deprecation-of-security-related-organization-api-fields" target="_blank" rel="noopener">April 21</a>)</li>
+</ul>
+<h2>GHES 3.20.1 is out (April 21)</h2>
+<p>This is a serious patch release. Multiple HIGH-severity CVE fixes including:</p>
+<ul>
+<li>A token scope fallback that could let revoked GitHub App <code>ghu_</code> tokens reach private repos (CVE-2026-5845).</li>
+<li>A notebook viewer SSRF plus timing side channel that could leak environment variables (CVE-2026-5921).</li>
+<li>A Management Console shell injection that allowed RCE as the admin OS user (CVE-2026-4821).</li>
+<li>An OAuth callback URL bypass (CVE-2026-4296).</li>
+<li>An <code>enable_auto_merge</code> auth bypass on branches without protection rules (CVE-2026-1999).</li>
+</ul>
+<p>The instance also stops advertising <code>ssh-rsa</code> (SHA-1) signatures on ports 22 and 122, so clients should support <code>rsa-sha2-256</code> or <code>rsa-sha2-512</code>. If you run GHES 3.20.x, prioritize this upgrade. <a href="https://docs.github.com/en/enterprise-server/admin/release-notes" target="_blank" rel="noopener">Release notes</a>.</p>
+<h2>Improved search for GitHub Issues is <code>GA</code></h2>
+<p><strong>April 2.</strong> The faster, more accurate Issues search experience is now available across github.com. <a href="https://github.blog/changelog/2026-04-02-improved-search-for-github-issues-is-now-generally-available" target="_blank" rel="noopener">Changelog</a>.</p>
+<h2>Global pull requests dashboard moves to opt-out public preview</h2>
+<p><strong>April 23.</strong> The cross-repo PR dashboard moved from opt-in to opt-out, so it shows up by default. Useful single pane for engineering managers tracking team-wide PR flow. <a href="https://github.blog/changelog/2026-04-23-global-pull-requests-dashboard-moves-to-opt-out-public-preview" target="_blank" rel="noopener">Changelog</a>.</p>
+<h2>Rule insights dashboard and unified filter bar</h2>
+<p><strong>April 16.</strong> Repository ruleset insights gets a new dashboard and unified filtering. Easier to spot policy violations and bypass patterns at a glance. <a href="https://github.blog/changelog/2026-04-16-rule-insights-dashboard-and-unified-filter-bar" target="_blank" rel="noopener">Changelog</a>.</p>
+<h2>More platform updates</h2>
+<ul>
+<li><strong>Disable commit comments across your organization</strong> is a new org-level governance setting. (<a href="https://github.blog/changelog/2026-04-23-disable-commit-comments-across-your-organization" target="_blank" rel="noopener">April 23</a>)</li>
+<li><strong>GitHub Mobile</strong>: refreshed Copilot tab and native session logs (<a href="https://github.blog/changelog/2026-04-01-github-mobile-stay-in-flow-with-a-refreshed-copilot-tab-and-native-session-logs" target="_blank" rel="noopener">April 1</a>); faster, more flexible agent assignment from issues (<a href="https://github.blog/changelog/2026-04-01-github-mobile-faster-more-flexible-agent-assignment-from-issues" target="_blank" rel="noopener">April 1</a>); research and code with cloud agent anywhere (<a href="https://github.blog/changelog/2026-04-08-github-mobile-research-and-code-with-copilot-cloud-agent-anywhere" target="_blank" rel="noopener">April 8</a>).</li>
+<li><strong>Issues and Projects</strong>: release info in issue sidebar and default values for project fields (<a href="https://github.blog/changelog/2026-04-09-release-info-in-issue-sidebar-and-project-defaults" target="_blank" rel="noopener">April 9</a>); repo member role labels in PR list view (<a href="https://github.blog/changelog/2026-04-09-repository-member-role-labels-now-in-pull-request-list-view" target="_blank" rel="noopener">April 9</a>).</li>
+<li><strong>Notifications</strong> has a new Sort by control. (<a href="https://github.blog/changelog/2026-04-09-new-sort-by-control-added-to-notifications" target="_blank" rel="noopener">April 9</a>)</li>
+<li><strong>GitHub Actions</strong>: early-April updates bundle (<a href="https://github.blog/changelog/2026-04-02-github-actions-early-april-2026-updates" target="_blank" rel="noopener">April 2</a>); workflows are now capped at <strong>50 reruns per run</strong>, so check any high-rerun automation (<a href="https://github.blog/changelog/2026-04-10-actions-workflows-are-limited-to-50-reruns" target="_blank" rel="noopener">April 10</a>); a new format for GitHub App installation tokens (<code>ghs_</code>) is coming, so review any token validators (<a href="https://github.blog/changelog/2026-04-24-notice-about-upcoming-new-format-for-github-app-installation-tokens" target="_blank" rel="noopener">April 24</a>); npm trusted publishing now supports CircleCI (<a href="https://github.blog/changelog/2026-04-06-npm-trusted-publishing-now-supports-circleci" target="_blank" rel="noopener">April 6</a>).</li>
+<li><strong>GitHub CLI</strong>: opt-out usage telemetry (<a href="https://github.blog/changelog/2026-04-22-github-cli-opt-out-usage-telemetry" target="_blank" rel="noopener">April 22</a>) and a new PGP signing key for Linux packages (<a href="https://github.blog/changelog/2026-04-08-new-pgp-signing-key-for-github-cli-linux-packages" target="_blank" rel="noopener">April 8</a>).</li>
+<li><strong>GitHub Copilot for Jira</strong>: latest enhancements. (<a href="https://github.blog/changelog/2026-04-22-github-copilot-for-jira-our-latest-enhancements" target="_blank" rel="noopener">April 22</a>)</li>
+<li><strong>Visual Studio</strong>: monthly Copilot in Visual Studio update for March 2026. (<a href="https://github.blog/changelog/2026-04-02-github-copilot-in-visual-studio-march-update" target="_blank" rel="noopener">April 2</a>)</li>
+</ul>
+<h2>Codespaces is <code>GA</code> for GitHub Enterprise Cloud with data residency</h2>
+<p><strong>April 1.</strong> Codespaces is now generally available on GitHub Enterprise Cloud with data residency, with full feature parity. Available regions: Australia, EU, Japan, US. To maintain strict data residency, enterprise- or org-owned codespaces are required (user-owned codespaces aren't supported in this configuration). <a href="https://github.blog/changelog/2026-04-01-codespaces-is-now-generally-available-for-github-enterprise-with-data-residency" target="_blank" rel="noopener">Changelog</a>, <a href="https://docs.github.com/codespaces" target="_blank" rel="noopener">Codespaces docs</a>, and <a href="https://docs.github.com/enterprise-cloud@latest/admin/data-residency/about-github-enterprise-cloud-with-data-residency" target="_blank" rel="noopener">data residency docs</a>.</p>
+<h2>Heads up: Copilot moves to usage-based billing on June 1, 2026</h2>
+<p><code>ANNOUNCEMENT</code>, <strong>April 27.</strong> This is the one to share with your billing managers and engineering leads. GitHub announced that Copilot is moving to usage-based billing on <strong>June 1, 2026</strong>. As part of that, <strong>Copilot code review will start consuming GitHub Actions minutes</strong> the same day. Two billing dimensions for each code review on private repos:</p>
+<p>1. All Copilot usage (including code reviews) is billed as <strong>AI Credits</strong> under the new model.</p>
+<p>2. <strong>GitHub Actions minutes</strong> will be consumed from your existing plan entitlement for each review. Usage beyond included minutes is billed at standard Actions rates.</p>
+<p>Public repos remain free. This applies to all paid Copilot plans (Business and Enterprise included).</p>
+<p>What we'd recommend doing in the next four weeks:</p>
+<ul>
+<li>Pull your current Actions usage and entitlements from billing settings.</li>
+<li>Set or confirm Actions budgets at org or enterprise level.</li>
+<li>Monitor Copilot and Actions metrics together so spikes don't surprise anyone.</li>
+<li>Loop your billing administrators and engineering leads in early.</li>
+</ul>
+<p>If you already have GitHub-hosted runners enabled, no additional setup is required. <a href="https://github.blog/changelog/2026-04-27-github-copilot-code-review-will-start-consuming-github-actions-minutes-on-june-1-2026" target="_blank" rel="noopener">Full announcement</a>.</p>
+<h2>New self-serve signups for Copilot Business are paused</h2>
+<p><strong>April 22.</strong> GitHub paused new self-serve signups for the Business plan. Existing Business customers aren't affected. For new Copilot rollouts at the mid-market level, this confirms Enterprise as the strategic path going forward. If you've been weighing the two, that's a useful signal. <a href="https://github.blog/changelog/2026-04-22-pausing-new-self-serve-signups-for-github-copilot-business" target="_blank" rel="noopener">Changelog</a>.</p>
+<h2>Microsoft Build 2026 (May 19–22)</h2>
+<p>Microsoft's flagship developer conference, free livestream plus in-person Seattle. Expect the biggest Copilot, agents, GitHub, and Azure announcements of the quarter. If your team is planning roadmap work for the second half of the year, this is the one to block calendars for. <a href="https://aka.ms/MSBuild_FY26_BN_Reactor_Reg" target="_blank" rel="noopener">Register and learn more</a>.</p>
+<h2>Before You Build: A Microsoft Build Preview (May 12, 8:00 AM PT)</h2>
+<p>A short orientation session with DevRel and GitHub voices on the biggest Build themes, must-watch sessions, and how to plan your Build experience. Worth an hour for anyone trying to figure out what to actually focus on across four days of content. <a href="https://developer.microsoft.com/en-us/reactor/events/27028/" target="_blank" rel="noopener">Register</a>.</p>
+<h2>GitHub Agentic Workflows: Automation That Actually Reads the Room (May 7, 9:00 AM PT)</h2>
+<p>Live demo: a markdown file plus one command launches an AI agent on GitHub Actions to triage issues, fix CI failures, update docs, and improve tests. From minimal workflow file to a sandboxed pipeline that delivers a ready-to-review PR. Worth an hour for any platform engineering lead. <a href="https://developer.microsoft.com/en-us/reactor/events/26943/" target="_blank" rel="noopener">Register</a>.</p>
+<h2>GitHub: From Workflows to Orchestration (Series, kicks off May 7)</h2>
+<p>Two-part hands-on series going deep on GitHub's agentic features, from workflows that automate your repo to orchestrated agents that think, plan, and execute like a team. <a href="https://developer.microsoft.com/en-us/reactor/series/S-1659/" target="_blank" rel="noopener">Register</a>.</p>
+<h2>Building an AI Agent Platform in .NET 10 with GitHub Copilot (Series, kicks off May 6)</h2>
+<p>Four-session hands-on series building a production-grade AI agent platform from scratch, using GitHub Copilot as your coding partner. .NET 10 plus Blazor and Aspire, with optional Azure OpenAI / Foundry integration. <a href="https://developer.microsoft.com/en-us/reactor/series/S-1652/" target="_blank" rel="noopener">Register</a>.</p>
+<h2>Agent Academy Live (May 12, 8:00 AM–3:00 PM PT)</h2>
+<p>One-day virtual conference on agent patterns, governance, ALM and compliance, MCP and Agent 365 integration, and multi-agent systems for real business scenarios. Includes a hackathon kickoff. Good for builders and architects who've prototyped an agent and need a path to production. <a href="https://developer.microsoft.com/en-us/reactor/events/27042/" target="_blank" rel="noopener">Register</a>.</p>
+<p>That's the roundup for April. The headline is that Copilot is finally enterprise-ready in the ways a lot of you have been asking about: data residency, FedRAMP, org-wide instructions, BYOK, an SDK, and an agent that can plan and research, not just open PRs. The other headline is June 1, when usage-based billing kicks in and Copilot code review starts pulling Actions minutes. There's a real opportunity over the next few weeks to look at your numbers, set budgets, and make sure the change isn't a surprise.</p>
+<p>If you want to talk through any of these, especially data residency, the new billing model, or what a cloud agent rollout could look like for your team, just let me know and we'll grab time. Happy to jump on a call.</p>
+<p>Talk soon,</p>
+<p>James</p></article>
+<div class="foot">Curated by James Osumah &middot; GitHub. Product details link to the official GitHub changelog and blog.</div>
+</div></body></html>
