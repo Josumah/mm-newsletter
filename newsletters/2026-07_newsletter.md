@@ -1,5 +1,7 @@
 # GitHub Mid-Market Roundup, July 2026
 
+*[Read this issue online](https://josumah.github.io/mm-newsletter/issues/2026-07.html) or [browse every past issue in the archive](https://josumah.github.io/mm-newsletter/).*
+
 Hey everyone, this is my monthly roundup of the GitHub updates that actually matter for your team. June and July were dense, so I stretched this one across both. Three things really stood out:
 
 - **The GitHub Copilot app is `GA`.** There's now an agent-native desktop home for macOS, Windows, and Linux, and it's the clearest signal yet that the agentic workflow is the default, not the experiment.
