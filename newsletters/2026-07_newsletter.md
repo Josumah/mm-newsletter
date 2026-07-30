@@ -1,4 +1,4 @@
-# GitHub Mid-Market Roundup, July 2026
+# James' Curated GitHub Newsletter, July 2026
 
 *[Read this issue online](https://josumah.github.io/mm-newsletter/issues/2026-07.html) or [browse every past issue in the archive](https://josumah.github.io/mm-newsletter/).*
 

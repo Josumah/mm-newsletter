@@ -1,4 +1,4 @@
-# GitHub Mid-Market Roundup, April 2026
+# James' Curated GitHub Newsletter, April 2026
 
 Hey everyone, this is my monthly roundup of the GitHub updates that actually matter for your team. April was a big one. Three things really stood out:
 
@@ -199,7 +199,7 @@ If you already have GitHub-hosted runners enabled, no additional setup is requir
 
 ## New self-serve signups for Copilot Business are paused
 
-**April 22.** GitHub paused new self-serve signups for the Business plan. Existing Business customers aren't affected. For new Copilot rollouts at the mid-market level, this confirms Enterprise as the strategic path going forward. If you've been weighing the two, that's a useful signal. [Changelog](https://github.blog/changelog/2026-04-22-pausing-new-self-serve-signups-for-github-copilot-business).
+**April 22.** GitHub paused new self-serve signups for the Business plan. Existing Business customers aren't affected. For new Copilot rollouts, this confirms Enterprise as the strategic path going forward. If you've been weighing the two, that's a useful signal. [Changelog](https://github.blog/changelog/2026-04-22-pausing-new-self-serve-signups-for-github-copilot-business).
 
 # 📅 Events & Training (May–June 2026)
 
