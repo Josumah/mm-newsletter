@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>James&#x27; Curated GitHub Newsletter, August 2026</title>
+<style>
+:root{--fg:#1f2328;--muted:#59636e;--accent:#0969da;--border:#d0d7de;--bg:#ffffff;--card:#f6f8fa;}
+*{box-sizing:border-box;}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+ font-size:16px;line-height:1.6;color:var(--fg);background:var(--bg);margin:0;}
+.wrap{max-width:760px;margin:0 auto;padding:32px 20px 64px;}
+header.site{border-bottom:2px solid var(--border);padding-bottom:20px;margin-bottom:8px;}
+header.site h1{margin:0 0 6px;font-size:28px;}
+header.site p{margin:0;color:var(--muted);}
+a{color:var(--accent);text-decoration:none;}
+a:hover{text-decoration:underline;}
+.issue-card{border:1px solid var(--border);border-radius:10px;padding:18px 20px;margin:18px 0;background:var(--card);}
+.issue-card h2{margin:0 0 4px;font-size:20px;}
+.issue-card .date{color:var(--muted);font-size:13px;margin:0 0 10px;}
+.issue-card p.summary{margin:0 0 12px;}
+.issue-card .links a{margin-right:16px;font-weight:600;}
+.back{display:inline-block;margin-bottom:20px;font-weight:600;}
+article h2{border-bottom:1px solid var(--border);padding-bottom:6px;margin-top:34px;font-size:23px;}
+article h3{margin-top:24px;font-size:18px;}
+article h4{margin-top:20px;font-size:16px;}
+article ul{padding-left:22px;}
+article li{margin:6px 0;}
+article code{background:var(--card);padding:1px 6px;border-radius:5px;font-size:90%;}
+article table{width:100%;border-collapse:collapse;margin:16px 0;display:block;overflow-x:auto;}
+article th,article td{border:1px solid var(--border);padding:8px 10px;text-align:left;vertical-align:top;}
+article th{background:var(--card);font-weight:600;}
+article hr{border:0;border-top:1px solid var(--border);margin:32px 0;}
+.foot{margin-top:48px;padding-top:16px;border-top:1px solid var(--border);color:var(--muted);font-size:13px;}
+</style></head>
+<body><div class="wrap">
+<a class="back" href="../index.html">&larr; All issues</a>
+<article><h1>James' Curated GitHub Newsletter, August 2026</h1>
+<p><em><a href="https://josumah.github.io/mm-newsletter/issues/2026-08.html" target="_blank" rel="noopener">Read this issue online</a> or <a href="https://josumah.github.io/mm-newsletter/" target="_blank" rel="noopener">browse every past issue in the archive</a>.</em></p>
+<p>Hey everyone, here's my roundup of the GitHub updates that mattered most from July 1 through August 2. The theme this time is pretty clear: agents kept getting more capable, but the controls around cost, policy, quality, and security finally started catching up. That's the shift that makes broader adoption feel practical instead of experimental. If something here lines up with what your team is working through, send it back to me and we'll dig in.</p>
+<ul>
+<li><strong>Enterprise-managed settings now follow Copilot across more clients</strong>, so the same guardrails can cover VS Code, Copilot CLI, the Copilot app, and cloud agent work.</li>
+<li><strong>GitHub Code Quality is now <code>GA</code></strong>, with quality gates and AI-assisted findings, plus a new standalone pricing model that needs a quick enablement review.</li>
+<li><strong>AI spend and adoption reporting got much sharper</strong>, with cost-center credit pools, per-user budgets, repository metrics, and an impact dashboard.</li>
+</ul>
+<hr>
+<h2>Save the Date: GitHub Universe 2026</h2>
+<p><strong>GitHub Universe 2026</strong> is happening <strong>October 28-29</strong> at Fort Mason Center in San Francisco, with virtual attendance available too. This one sits outside my normal two-month event window, but it's GitHub's flagship event and worth getting on the calendar early if your team wants the latest product announcements, technical sessions, and customer stories in one place. <a href="https://githubuniverse.com/" target="_blank" rel="noopener">Event details</a></p>
+<hr>
+<h2>More agents, tighter controls</h2>
+<h3><strong>Enterprise-managed Copilot settings</strong> (<code>GA</code>)</h3>
+<p>Enterprise-managed settings started the month in VS Code and Copilot CLI, then expanded to the Copilot app and Copilot cloud agent. We can now define approved plugins and marketplaces, control whether users can bypass approval prompts, and set model defaults from one managed configuration. The Copilot app also has its own access policy, so admins can enable it everywhere, turn it off, or let organizations decide without tying that choice to Copilot CLI. <a href="https://github.blog/changelog/2026-07-01-enterprise-managed-settings-json-is-generally-available" target="_blank" rel="noopener">Initial GA</a> | <a href="https://github.blog/changelog/2026-07-27-enterprise-managed-settings-now-apply-to-the-github-copilot-app" target="_blank" rel="noopener">Client expansion</a> | <a href="https://github.blog/changelog/2026-07-27-manage-github-copilot-app-access-with-a-dedicated-policy" target="_blank" rel="noopener">App policy</a> | <a href="https://docs.github.com/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-agents/configure-enterprise-managed-settings" target="_blank" rel="noopener">Docs</a></p>
+<h3><strong>AI spend controls and adoption reporting</strong></h3>
+<p>Usage-based billing is easier to manage when included credits, overage, and adoption are not blended into one number. Cost centers can now cap the included AI-credit pool they draw from, while per-user budgets control metered spend and follow assigned users or enterprise teams as membership changes. On the reporting side, repository-level metrics show where coding agent and code review activity is happening, and the impact dashboard groups users by adoption phase so we can target enablement instead of just counting active seats. <a href="https://github.blog/changelog/2026-07-02-cost-centers-now-support-included-usage-caps" target="_blank" rel="noopener">AI credit pools</a> | <a href="https://github.blog/changelog/2026-07-07-per-user-budgets-for-cost-centers-in-the-billing-ui" target="_blank" rel="noopener">Per-user budgets</a> | <a href="https://github.blog/changelog/2026-07-17-repository-level-github-copilot-usage-metrics-generally-available" target="_blank" rel="noopener">Repository metrics</a> | <a href="https://github.blog/changelog/2026-07-22-new-copilot-usage-metrics-impact-dashboard" target="_blank" rel="noopener">Impact dashboard</a> | <a href="https://docs.github.com/enterprise-cloud@latest/copilot/concepts/billing/budgets-for-usage-based-billing" target="_blank" rel="noopener">Budget docs</a></p>
+<h3><strong>GitHub Code Quality</strong> (<code>GA</code>)</h3>
+<p>GitHub Code Quality is now generally available on GitHub Enterprise Cloud and GitHub Team. It combines deterministic CodeQL analysis with AI-assisted maintainability and reliability findings, adds code coverage on pull requests, and supports ruleset-based quality gates with an evaluate mode for gradual rollout. This is a standalone paid product at <strong>$10 per active committer per month</strong>, plus usage-based charges for AI-powered work and the Actions compute used for analysis, so it's worth checking where the preview was enabled before the next bill. <a href="https://github.blog/changelog/2026-07-20-github-code-quality-is-now-generally-available" target="_blank" rel="noopener">GA announcement</a> | <a href="https://docs.github.com/code-security/concepts/about-code-quality" target="_blank" rel="noopener">Product docs</a> | <a href="https://docs.github.com/billing/concepts/product-billing/github-code-quality" target="_blank" rel="noopener">Billing docs</a></p>
+<hr>
+<h2>Copilot &amp; AI</h2>
+<h3><strong>Copilot code review gets skills, MCP, and runtime controls</strong> (<code>GA</code>)</h3>
+<p>Copilot code review can now use repository agent skills and read-only MCP connections to bring team standards, service catalogs, documentation, and other approved context into a review. It also gained a default firewall, independent runner settings, custom setup steps, and the ability to test instruction changes from the pull request's head branch before merging them. GitHub also shared how better review-specific instructions cut average review cost by roughly 20% without reducing review quality, which is a useful reminder that the workflow around an agent matters as much as the model. <a href="https://github.blog/changelog/2026-07-29-copilot-code-review-agent-skills-and-mcp-now-generally-available" target="_blank" rel="noopener">Skills and MCP GA</a> | <a href="https://github.blog/changelog/2026-07-17-copilot-code-review-customization-and-configurability-improvements" target="_blank" rel="noopener">Runtime controls</a> | <a href="https://docs.github.com/copilot/concepts/agents/about-agent-skills" target="_blank" rel="noopener">Agent skills docs</a> | <a href="https://github.blog/ai-and-ml/github-copilot/better-tools-made-copilot-code-review-worse-heres-how-we-actually-improved-it/" target="_blank" rel="noopener">Engineering deep-dive</a></p>
+<h3><strong>Model choice expanded, and governance changed with it</strong></h3>
+<p>July added <strong>Kimi K2.7 Code</strong>, <strong>GPT-5.6 Sol, Terra, and Luna</strong>, <strong>Gemini 3.6 Flash</strong>, <strong>Claude Opus 5</strong>, and <strong>Grok 4.5</strong> to Copilot. The bigger admin change is the new default-enablement policy: beginning August 26, newly GA models that are not explicitly configured follow the enterprise or organization default, so teams that want manual approval for every model should disable that policy. Enterprise-team model targeting also entered <code>PREVIEW</code>, letting admins keep a baseline for everyone and grant optional models to role-based or early-adopter groups. <a href="https://github.blog/changelog/2026-07-29-default-model-enablement-for-copilot-business-and-enterprise" target="_blank" rel="noopener">Default enablement</a> | <a href="https://github.blog/changelog/2026-07-31-enterprise-teams-model-policy-targeting-in-public-preview" target="_blank" rel="noopener">Team targeting preview</a> | <a href="https://docs.github.com/copilot/reference/ai-models/supported-models" target="_blank" rel="noopener">Supported models</a></p>
+<h3><strong>Copilot CLI in Actions no longer needs a PAT</strong></h3>
+<p>Copilot CLI can now authenticate in GitHub Actions with the workflow's built-in <code>GITHUB_TOKEN</code>, so we can remove a long-lived personal access token from these automations. Organization-owned repositories need the <code>copilot-requests: write</code> permission, and the resulting AI credits are billed to the organization. Cost centers and per-session credit limits give us the guardrails to pair with that simpler authentication model. <a href="https://github.blog/changelog/2026-07-02-copilot-cli-no-longer-needs-a-personal-access-token-in-github-actions" target="_blank" rel="noopener">Changelog</a> | <a href="https://docs.github.com/copilot/how-tos/copilot-cli/use-copilot-cli-in-actions" target="_blank" rel="noopener">Setup guide</a></p>
+<h3><strong>Copilot cloud agent for Linear</strong> (<code>GA</code>)</h3>
+<p>Linear teams can assign an issue to Copilot cloud agent and get progress updates back in the issue while the agent works in an isolated environment and opens a draft pull request. Model selection, custom agents, branch targeting, and steering comments can all be controlled from Linear. <a href="https://github.blog/changelog/2026-07-23-copilot-cloud-agent-for-linear-is-now-generally-available" target="_blank" rel="noopener">Changelog</a> | <a href="https://docs.github.com/copilot/concepts/agents/cloud-agent/about-cloud-agent" target="_blank" rel="noopener">Cloud agent docs</a></p>
+<hr>
+<h2>IDE Updates</h2>
+<h3><strong>VS Code's July releases focused on multi-agent work</strong></h3>
+<p>VS Code 1.127 through 1.131 made the Agents window easier to use for real project work. Teams can review code beside chat, isolate sessions with worktrees across multiple agent harnesses, fork related conversations, track active subagents, and act on failed checks or review comments without leaving the session. Browser tools are also <code>GA</code>, with isolated agent tabs, explicit sharing for user-opened pages, and admin controls for browser access and network domains. <a href="https://github.blog/changelog/2026-07-30-github-copilot-in-visual-studio-code-july-2026-releases" target="_blank" rel="noopener">July release summary</a> | <a href="https://github.blog/changelog/2026-07-01-browser-tools-for-github-copilot-in-vs-code-are-generally-available" target="_blank" rel="noopener">Browser tools</a> | <a href="https://aka.ms/VSCode/Release" target="_blank" rel="noopener">Release notes</a></p>
+<h3><strong>Visual Studio adds a Copilot SDK-based agent</strong> (<code>PREVIEW</code>)</h3>
+<p>Visual Studio's July update added a new agent built on the Copilot SDK, plus built-in .NET and Azure skills, selected-code review, and organization-level custom instructions. That's a strong parity move for teams that live in Visual Studio and want the same reusable agent patterns showing up elsewhere in the Copilot ecosystem. <a href="https://github.blog/changelog/2026-07-30-github-copilot-in-visual-studio-july-update" target="_blank" rel="noopener">Changelog</a> | <a href="https://devblogs.microsoft.com/visualstudio/visual-studio-july-update-meet-the-new-agent-powered-by-copilot-sdk" target="_blank" rel="noopener">Visual Studio blog</a> | <a href="https://learn.microsoft.com/visualstudio/releases/2026/release-notes" target="_blank" rel="noopener">Release notes</a></p>
+<h3><strong>JetBrains adds stronger agent and model controls</strong></h3>
+<p>Copilot for JetBrains added Codex and Claude agent improvements, BYOK support, local sandboxing in <code>PREVIEW</code>, MCP management, and agent debug logs. Later in the month it added OpenTelemetry export, token limits for custom endpoints, built-in model enablement controls, and MCP plus custom-agent support in Claude flows. For mixed-IDE enterprises, those governance and observability controls matter more than simple feature-count parity. <a href="https://github.blog/changelog/2026-07-07-codex-as-agent-provider-and-agentic-enhancements-in-jetbrains-ides" target="_blank" rel="noopener">Agent update</a> | <a href="https://github.blog/changelog/2026-07-27-github-copilot-for-jetbrains-adds-improvved-opentelemetry-configuration-and-model-management" target="_blank" rel="noopener">Governance update</a> | <a href="https://plugins.jetbrains.com/plugin/17718-github-copilot--your-ai-pair-programmer/versions" target="_blank" rel="noopener">Plugin releases</a></p>
+<hr>
+<h2>Enterprise &amp; Security</h2>
+<h3><strong>Agentic security remediation moves into the pull request</strong> (<code>PREVIEW</code>)</h3>
+<p>Agentic autofix can now take a first- or third-party code scanning alert, explore the codebase, propose a fix, rerun the original analysis, and open a validated draft pull request. AI security detections also extend pull request findings to languages and frameworks outside CodeQL's built-in coverage. Both features require GitHub Code Security or GitHub Advanced Security plus Copilot access, and they consume AI credits, while agentic autofix also uses Actions minutes. <a href="https://github.blog/changelog/2026-07-10-agentic-autofix-for-code-scanning-alerts-in-public-preview" target="_blank" rel="noopener">Agentic autofix</a> | <a href="https://github.blog/changelog/2026-07-14-code-scanning-shows-ai-security-detections-on-pull-requests" target="_blank" rel="noopener">AI security detections</a> | <a href="https://docs.github.com/code-security/code-scanning/introduction-to-code-scanning/about-code-scanning" target="_blank" rel="noopener">Code scanning docs</a></p>
+<h3><strong>Secret scanning public monitoring</strong> (<code>PREVIEW</code>)</h3>
+<p>Public monitoring looks for secrets attributed to your enterprise anywhere in public GitHub content, not just repositories the enterprise owns. Attribution uses enterprise membership and verified domains, which helps security teams catch leaks from personal forks, public issues, or outside open source contributions. It's available at <strong>no additional cost</strong> for GitHub Enterprise Cloud customers with Secret Protection or Advanced Security. <a href="https://github.blog/changelog/2026-07-01-secret-scanning-public-monitoring-for-enterprises" target="_blank" rel="noopener">Changelog</a> | <a href="https://docs.github.com/code-security/secret-scanning/introduction/about-secret-scanning" target="_blank" rel="noopener">Secret scanning docs</a></p>
+<h3><strong>Supply chain protections got more automatic</strong></h3>
+<p>GitHub Actions now holds certain suspicious workflow runs in public repositories until a write-access collaborator approves them, with no setup required. Dependabot malware alerts also gained broader npm, PyPI, and multi-ecosystem coverage through OpenSSF malicious-package advisories. If your teams are getting buried in routine version updates, GitHub also published a practical guide for grouping updates and slowing the cadence without delaying security fixes. <a href="https://github.blog/changelog/2026-07-28-github-actions-holds-potentially-malicious-workflows-for-approval" target="_blank" rel="noopener">Actions protection</a> | <a href="https://github.blog/changelog/2026-07-28-dependabot-alerts-on-malicious-packages-across-more-ecosystems" target="_blank" rel="noopener">Dependabot malware coverage</a> | <a href="https://github.blog/security/supply-chain-security/disrupting-supply-chain-attacks-on-npm-and-github-actions/" target="_blank" rel="noopener">Supply chain overview</a> | <a href="https://github.blog/security/supply-chain-security/tame-dependabot-group-your-updates-slow-the-cadence-keep-security-fast/" target="_blank" rel="noopener">Dependabot guide</a></p>
+<ul>
+<li><strong>Worth noting:</strong> Secret scanning custom patterns can now be created and managed through repository, organization, and enterprise REST APIs. Dry runs and final publication still happen in the UI. <a href="https://github.blog/changelog/2026-07-13-create-and-manage-secret-scanning-custom-patterns-via-rest-api" target="_blank" rel="noopener">Changelog</a> | <a href="https://docs.github.com/rest/secret-scanning" target="_blank" rel="noopener">REST API docs</a></li>
+</ul>
+<hr>
+<h2>Platform &amp; DevEx</h2>
+<h3><strong>Stacked pull requests</strong> (<code>PREVIEW</code>)</h3>
+<p>Stacked pull requests break a large change into smaller, ordered pull requests that can be reviewed in parallel and merged together when ready. Existing branch protections, required checks, and review rules still apply, which makes stacks a practical response to the larger and faster changes agentic development can produce. <a href="https://github.blog/changelog/2026-07-30-stacked-pull-requests-are-now-in-public-preview" target="_blank" rel="noopener">Changelog</a> | <a href="https://gh.io/stacks" target="_blank" rel="noopener">Docs</a></p>
+<ul>
+<li><strong>GitHub Actions self-repository syntax:</strong> A <code>uses:</code> value beginning with <code>$/</code> now resolves an action or reusable workflow from the same repository at the exact running commit. That removes the checkout requirement and works cleanly with enterprise policies that require full-length commit SHA pinning. <a href="https://github.blog/changelog/2026-07-30-reference-same-repository-actions-with-self-repository-syntax" target="_blank" rel="noopener">Changelog</a> | <a href="https://docs.github.com/actions/how-tos/write-workflows/choose-what-workflows-do/find-and-customize-actions" target="_blank" rel="noopener">Docs</a></li>
+</ul>
+<hr>
+<h2>Reliability &amp; Incident Learnings</h2>
+<p>GitHub had a concentrated run of Actions and core-platform incidents in July, and the resolved Statuspage updates include more detail than the usual service-restored notice. The July 24 network incident affected Actions, Issues, Copilot, Git pushes, and authentication, while a separate database migration issue affected <strong>113,930 pull request creation attempts from 50,904 users</strong>. On July 25, two Actions degradation periods tied to Redis maintenance and regional capacity changes peaked with <strong>60% of runs failing with infrastructure errors</strong> during the second period. <a href="https://stspg.io/j5c80shxqm53" target="_blank" rel="noopener">Multi-service incident</a> | <a href="https://stspg.io/sm1tp7kfm4vj" target="_blank" rel="noopener">Pull request incident</a> | <a href="https://www.githubstatus.com/incidents/s65j9gslmfm8" target="_blank" rel="noopener">Actions incident</a></p>
+<p>The follow-up work is the useful part: stronger preflight and deployment validation, safer maintenance recovery checks, better autoscaling and memory alerts, certificate-expiry safeguards, more automated failover, and an accelerated data-center network upgrade. Copilot also had several upstream model-provider disruptions; other models generally stayed available, so selecting <strong>Auto</strong> or another model remained the practical fallback. <a href="https://www.githubstatus.com/history" target="_blank" rel="noopener">GitHub incident history</a></p>
+<hr>
+<h2>Resources &amp; Training</h2>
+<ul>
+<li><strong>Cross-repository agentic documentation:</strong> The Aspire team used GitHub Agentic Workflows to open 82 feature-documentation pull requests at a median of 44.8 hours after the product pull request, with guarded write paths and subject-matter review. <a href="https://github.blog/ai-and-ml/github-copilot/automating-cross-repo-documentation-with-github-agentic-workflows/" target="_blank" rel="noopener">Case study</a></li>
+</ul>
+<table><thead><tr>
+<th>Learning path</th>
+<th>Best for</th>
+<th>Link</th>
+</tr></thead><tbody>
+<tr>
+<td>GitHub Copilot Fundamentals, Part 1</td>
+<td>Teams starting an enablement program</td>
+<td><a href="https://learn.microsoft.com/en-us/training/paths/copilot/" target="_blank" rel="noopener">Microsoft Learn</a></td>
+</tr>
+<tr>
+<td>GitHub Copilot Fundamentals, Part 2</td>
+<td>Teams moving into deeper Copilot workflows</td>
+<td><a href="https://learn.microsoft.com/en-us/training/paths/gh-copilot-2/" target="_blank" rel="noopener">Microsoft Learn</a></td>
+</tr>
+<tr>
+<td>GitHub Advanced Security</td>
+<td>Security and platform engineering teams</td>
+<td><a href="https://learn.microsoft.com/en-us/training/paths/github-advanced-security/" target="_blank" rel="noopener">Microsoft Learn</a></td>
+</tr>
+<tr>
+<td>GitHub Actions</td>
+<td>Developers and CI/CD owners</td>
+<td><a href="https://learn.microsoft.com/en-us/training/paths/github-actions/" target="_blank" rel="noopener">Microsoft Learn</a></td>
+</tr>
+</tbody></table>
+<hr>
+<h2>Events</h2>
+<h3>Virtual Events</h3>
+<table><thead><tr>
+<th>Date</th>
+<th>Event</th>
+<th>Topics</th>
+</tr></thead><tbody>
+<tr>
+<td>September 4, 2026</td>
+<td><a href="https://developer.microsoft.com/en-us/reactor/events/27557/" target="_blank" rel="noopener">The Story of VS Code</a></td>
+<td>VS Code, AI, developer tools</td>
+</tr>
+<tr>
+<td>September 8, 2026</td>
+<td><a href="https://developer.microsoft.com/en-us/reactor/events/27459/" target="_blank" rel="noopener">CoreStory + GitHub Copilot: Turning Plausible Suggestions Into Correct Ones</a></td>
+<td>Copilot, MCP, code context</td>
+</tr>
+<tr>
+<td>September 8, 2026</td>
+<td><a href="https://developer.microsoft.com/en-us/reactor/events/27463/" target="_blank" rel="noopener">AI Genius: Code with AI</a></td>
+<td>Copilot app, CLI, agentic workflows</td>
+</tr>
+<tr>
+<td>September 9, 2026</td>
+<td><a href="https://developer.microsoft.com/en-us/reactor/events/27448/" target="_blank" rel="noopener">MCP Live!</a></td>
+<td>MCP, GitHub, governance, security</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>Deprecations &amp; Migration Notices</h2>
+<ul>
+<li><strong>GitHub Models retired on July 30.</strong> The playground, model catalog, inference API, and BYOK capability are no longer available. Microsoft Foundry is the recommended path for model-catalog access, while GitHub-native agent workflows continue through Copilot. <a href="https://github.blog/changelog/2026-07-30-github-models-is-now-retired" target="_blank" rel="noopener">Retirement notice</a> | <a href="https://docs.github.com/github-models" target="_blank" rel="noopener">Docs</a></li>
+</ul>
+<ul>
+<li><strong>Several Copilot models were removed on September 1.</strong> The list included Gemini 3.1 Pro, Claude Opus 4.5 and 4.6, Claude Sonnet 4.5 and most 4.6 access, and Raptor Mini. If an instruction file or workflow still pins one of those models, move it to a supported replacement and confirm the replacement is enabled in enterprise policy. <a href="https://github.blog/changelog/2026-07-31-upcoming-august-2026-model-deprecations-in-github-copilot" target="_blank" rel="noopener">Deprecation notice</a> | <a href="https://docs.github.com/copilot/reference/ai-models/supported-models" target="_blank" rel="noopener">Supported models</a></li>
+</ul>
+<ul>
+<li><strong>The Copilot Billing Preview app retired on August 3.</strong> AI usage, exports, cost centers, and budgets now live in GitHub's built-in billing settings and APIs. <a href="https://github.blog/changelog/2026-07-07-copilot-billing-preview-app-will-be-retired-on-august-3" target="_blank" rel="noopener">Retirement notice</a> | <a href="https://docs.github.com/copilot/concepts/billing" target="_blank" rel="noopener">Billing docs</a></li>
+</ul>
+<hr>
+<p>That's the roundup. The big question for most teams is no longer whether agentic development is showing up, it's whether the policy, cost, and review model is ready for it. Let me know if you have any questions or want to walk through what these changes mean for your environment.</p></article>
+<div class="foot">Curated by James Osumah &middot; GitHub. Product details link to the official GitHub changelog and blog.</div>
+</div></body></html>
