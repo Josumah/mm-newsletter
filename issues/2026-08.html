@@ -2,22 +2,74 @@
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>James&#x27; Curated GitHub Newsletter, August 2026</title>
+<link rel="icon" href="../assets/github-mark.svg" type="image/svg+xml">
 <style>
-:root{--fg:#1f2328;--muted:#59636e;--accent:#0969da;--border:#d0d7de;--bg:#ffffff;--card:#f6f8fa;}
+:root{color-scheme:light dark;--fg:#1f2328;--muted:#59636e;--accent:#0969da;--accent-hover:#0757b9;
+ --border:#d0d7de;--bg:#ffffff;--card:#f6f8fa;--chip:#ddf4ff;--chip-fg:#0550ae;
+ --shadow:rgba(31,35,40,.08);--hero-start:#0969da;--hero-end:#8250df;}
 *{box-sizing:border-box;}
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
  font-size:16px;line-height:1.6;color:var(--fg);background:var(--bg);margin:0;}
 .wrap{max-width:760px;margin:0 auto;padding:32px 20px 64px;}
-header.site{border-bottom:2px solid var(--border);padding-bottom:20px;margin-bottom:8px;}
-header.site h1{margin:0 0 6px;font-size:28px;}
+header.site{position:relative;border-bottom:1px solid var(--border);padding:4px 0 22px;margin-bottom:8px;}
+header.site:before{content:"";position:absolute;left:0;bottom:-2px;width:112px;height:3px;border-radius:99px;
+ background:linear-gradient(90deg,var(--hero-start),var(--hero-end));}
+header.site h1{margin:0;font-size:28px;}
 header.site p{margin:0;color:var(--muted);}
+.brand-lockup{display:flex;align-items:center;gap:12px;margin-bottom:4px;}
+.brand-mark{width:34px;height:34px;flex:0 0 auto;}
 a{color:var(--accent);text-decoration:none;}
 a:hover{text-decoration:underline;}
-.issue-card{border:1px solid var(--border);border-radius:10px;padding:18px 20px;margin:18px 0;background:var(--card);}
+.archive-intro{color:var(--muted);margin:22px 0 14px;}
+.featured-card{position:relative;display:grid;grid-template-columns:150px 1fr;min-height:230px;overflow:hidden;
+ border-radius:16px;margin:18px 0 26px;color:#fff;
+ background:linear-gradient(135deg,var(--hero-start),var(--hero-end));box-shadow:0 14px 34px var(--shadow);}
+.featured-art{position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;
+ border-right:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08);}
+.featured-art:before,.featured-art:after{content:"";position:absolute;border:1px solid rgba(255,255,255,.16);border-radius:50%;}
+.featured-art:before{width:180px;height:180px;left:-70px;top:-60px;}
+.featured-art:after{width:120px;height:120px;right:-60px;bottom:-42px;}
+.featured-art img{width:74px;height:74px;filter:brightness(0) invert(1);opacity:.96;}
+.featured-content{display:flex;flex-direction:column;justify-content:center;padding:28px 30px;}
+.featured-label{margin:0 0 4px;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;opacity:.82;}
+.featured-card h2{margin:0 0 8px;font-size:31px;line-height:1.2;}
+.featured-card h2 a{color:#fff;}
+.featured-card h2 a:hover{text-decoration:none;}
+.featured-card .issue-stats{color:rgba(255,255,255,.82);}
+.featured-card .topic-chip{color:#fff;background:rgba(255,255,255,.16);border-color:rgba(255,255,255,.2);}
+.featured-card .links a{border-color:rgba(255,255,255,.45);color:#fff;}
+.featured-card .links a:hover{background:rgba(255,255,255,.12);}
+.featured-card .links a.primary{border-color:#fff;background:#fff;color:#0969da;}
+.featured-card .links a.primary:hover{background:#f6f8fa;}
+.issue-card{display:flex;align-items:center;justify-content:space-between;gap:24px;
+ border:1px solid var(--border);border-radius:12px;padding:20px 22px;margin:14px 0;background:var(--bg);
+ box-shadow:0 1px 2px var(--shadow);transition:border-color .15s ease,box-shadow .15s ease,transform .15s ease;}
+.issue-card:hover{border-color:#8c959f;box-shadow:0 6px 18px var(--shadow);transform:translateY(-1px);}
 .issue-card h2{margin:0 0 4px;font-size:20px;}
-.issue-card .date{color:var(--muted);font-size:13px;margin:0 0 10px;}
-.issue-card p.summary{margin:0 0 12px;}
-.issue-card .links a{margin-right:16px;font-weight:600;}
+.issue-info{min-width:0;}
+.issue-title{display:flex;align-items:center;gap:14px;min-width:0;}
+.mini-cover{display:flex;align-items:center;justify-content:center;width:44px;height:44px;flex:0 0 auto;
+ border-radius:10px;background:linear-gradient(135deg,var(--hero-start),var(--hero-end));}
+.mini-cover img{width:24px;height:24px;filter:brightness(0) invert(1);}
+.topics{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 0;}
+.topic-chip{display:inline-block;border:1px solid #b6e3ff;border-radius:999px;padding:2px 8px;
+ color:var(--chip-fg);background:var(--chip);font-size:11px;font-weight:600;line-height:1.5;}
+.issue-stats{margin:6px 0 0;color:var(--muted);font-size:13px;}
+.links{display:flex;gap:10px;margin:16px 0 0;white-space:nowrap;}
+.links a{display:inline-block;border:1px solid var(--border);border-radius:7px;padding:7px 12px;
+ font-size:14px;font-weight:600;line-height:1.4;}
+.links a:hover{text-decoration:none;background:var(--card);}
+.links a.primary{border-color:var(--accent);background:var(--accent);color:#fff;}
+.links a.primary:hover{background:var(--accent-hover);}
+@media (max-width:600px){
+ .featured-card{grid-template-columns:1fr;}
+ .featured-art{min-height:100px;border-right:0;border-bottom:1px solid rgba(255,255,255,.2);}
+ .featured-art img{width:54px;height:54px;}
+ .featured-content{padding:22px;}
+ .issue-card{align-items:flex-start;flex-direction:column;gap:14px;}
+ .links{width:100%;}
+ .links a{flex:1;text-align:center;}
+}
 .back{display:inline-block;margin-bottom:20px;font-weight:600;}
 article h2{border-bottom:1px solid var(--border);padding-bottom:6px;margin-top:34px;font-size:23px;}
 article h3{margin-top:24px;font-size:18px;}
@@ -30,6 +82,14 @@ article th,article td{border:1px solid var(--border);padding:8px 10px;text-align
 article th{background:var(--card);font-weight:600;}
 article hr{border:0;border-top:1px solid var(--border);margin:32px 0;}
 .foot{margin-top:48px;padding-top:16px;border-top:1px solid var(--border);color:var(--muted);font-size:13px;}
+@media (prefers-color-scheme:dark){
+ :root{--fg:#f0f6fc;--muted:#9198a1;--accent:#58a6ff;--accent-hover:#1f6feb;
+  --border:#3d444d;--bg:#0d1117;--card:#151b23;--chip:#121d2f;--chip-fg:#79c0ff;
+  --shadow:rgba(0,0,0,.32);--hero-start:#1f6feb;--hero-end:#8957e5;}
+ .brand-mark{filter:brightness(0) invert(1);}
+ .issue-card:hover{border-color:#6e7681;}
+ .topic-chip{border-color:#1f6feb;}
+}
 </style></head>
 <body><div class="wrap">
 <a class="back" href="../index.html">&larr; All issues</a>
